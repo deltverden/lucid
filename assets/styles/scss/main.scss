@@ -1,4 +1,6 @@
 @import '../css/reset.css';
+@import '_mixin.scss';
+@import '_variable.scss';
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -6,7 +8,7 @@ body {
 }
 
 .container {
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0;
 }
@@ -18,9 +20,7 @@ body {
     height: 100%;
 
     .top-section {
-
         .main-navigation {
-
             .nav-menu {
                 justify-content: flex-end;
     
@@ -42,25 +42,33 @@ body {
                         font-weight: 600;
                         text-decoration: none;
                         position: relative;
+
+                        &::before, &::after {
+                            content: '';
+                            opacity: 0;
+                            transition: .3s;
+                        }
     
                         &:hover {
                             &::before {
                                 content: '';
-                                width: 21px;
+                                opacity: 1;
+                                width: 48%;
                                 height: 2px;
                                 position: absolute;
                                 background-color: #008ed6;
                                 bottom: -10px;
-                                left: 30%;
+                                left: 0;
                             }
                             &::after {
                                 content: '';
-                                width: 21px;
+                                opacity: 1;
+                                width: 48%;
                                 height: 2px;
                                 position: absolute;
                                 background-color: #008ed6;
                                 bottom: -10px;
-                                right: 30%;
+                                right: 0;
                             }
                         }
                     }
@@ -73,7 +81,7 @@ body {
         justify-content: space-between;
 
         .left-block {
-            margin: 80px 0 110px;
+            margin: 80px 0 105px;
 
             .main-info {
                 .upper-title {
@@ -102,7 +110,7 @@ body {
             }
 
             .main-buttons {
-                margin-top: 105px;
+                margin-top: 85px;
 
                 .download-btn, .view-btn {
                     color: #fff;
@@ -122,20 +130,164 @@ body {
                 }
 
                 .view-btn {
-                    margin-left: 20px;
+                    margin-left: 15px;
                 }
             }
         }
 
         .right-block {
-            margin-top: 60px;
+            margin-top: 55px;
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
 
             img {
                 width: 510px;
-                height: 515px;
+                height: 520px;
+            }
+        }
+    }
+}
+
+.main {
+    margin-top: 60px;
+
+    // Features section
+    .features {
+        .features-head {
+            @include section-title();
+        }
+
+        .features-body {
+            margin: 75px 0 55px;
+
+            .feature-block {
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                .block-image {
+                    width: 88px;
+                    height: 88px;
+                }
+
+                .block-title {
+                    margin-top: 30px;
+                    color: $COLOR_TITLE;
+                    font-size: 2.4em;
+                    font-weight: 400;
+                }
+
+                .block-desc {
+                    text-align: center;
+                    color: #999999;
+                    font-size: 1.8em;
+                    line-height: 26px;
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: #ededed;
+        }
+    }
+
+    // About section
+    .about-us {
+        height: 100%;
+        padding: 70px 0;
+
+        .left-block {
+            padding-left: 20px;
+        }
+
+        .right-block {
+            margin: 45px 0 0;
+            padding-left: 15px;
+
+            .about-head {
+                @include section-title();
+                .section-underline {
+                    margin-top: -5px;
+                }
+            }
+
+            .about-body {
+                margin-top: 25px;
+
+                .about-desc {
+                    font-size: 1.8em;
+                    color: #999999;
+                    line-height: 26px;
+                }
+
+                .about-menu {
+                    margin-top: 22px;
+                    padding-left: 25px;
+
+                    .about-item {
+                        list-style: none;
+                        color: $COLOR_TITLE;
+                        font-weight: 400;
+                        font-size: 1.8em;
+                        line-height: 36px;
+                        position: relative;
+
+                        &.item1 {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 30%;
+                                left: -25px;
+                                width: 16px;
+                                height: 16px;
+                                background: url('../../images/about-cup.png') no-repeat;
+                            }
+                        }
+
+                        &.item2 {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 30%;
+                                left: -25px;
+                                width: 16px;
+                                height: 16px;
+                                background: url('../../images/about-mouse.png') no-repeat;
+                                background-position: center;
+                            }
+                        }
+
+                        &.item3 {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 30%;
+                                left: -25px;
+                                width: 16px;
+                                height: 16px;
+                                background: url('../../images/about-energy.png') no-repeat;
+                                background-position: center;
+                            }
+                        }
+
+                        &.item4 {
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                top: 30%;
+                                left: -25px;
+                                width: 16px;
+                                height: 16px;
+                                background: url('../../images/about-speed.png') no-repeat;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

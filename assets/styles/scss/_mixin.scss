@@ -1,0 +1,47 @@
+// All title sections in blocks
+@mixin section-title() {
+    flex-direction: column;
+    align-items: center;
+
+    .upper-title {
+        color: #008ed6;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+    }
+
+    .title {
+        color: $COLOR_TITLE;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 28px;
+        margin: 0 0 40px;
+    }
+
+    .section-underline {
+        width: 42px;
+        height: 2px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 48%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: #008ed6;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 48%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+            background-color: #008ed6;
+        }
+    }
+}
