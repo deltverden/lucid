@@ -46,6 +46,7 @@
     }
 }
 
+// Design all buttons
 @mixin all-buttons {
     & {
         color: #fff;
@@ -60,7 +61,7 @@
 
         &:hover {
             background-color: #008ed6;
-            border-color: rgba(255, 255, 255, 0.1);
+            border-color: #008ed6;
         }
     }
 }

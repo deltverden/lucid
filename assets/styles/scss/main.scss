@@ -1,6 +1,7 @@
 @import '../css/reset.css';
 @import '_mixin.scss';
 @import '_variable.scss';
+@import '_expansion.scss';
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -17,7 +18,6 @@ body {
     background: url('../../images/header_back.png') no-repeat;
     background-size: 100%;
     padding: 40px 0 0;
-    height: 100%;
 
     .top-section {
         .main-navigation {
@@ -37,7 +37,7 @@ body {
                     }
     
                     a {
-                        color: #fffefe;
+                        color: $COLOR_WHITE;
                         font-size: 1.6em;
                         font-weight: 600;
                         text-decoration: none;
@@ -53,20 +53,20 @@ body {
                             &::before {
                                 content: '';
                                 opacity: 1;
-                                width: 48%;
+                                width: calc(50% - 1px);
                                 height: 2px;
                                 position: absolute;
-                                background-color: #008ed6;
+                                background-color: $COLOR_SEA;
                                 bottom: -10px;
                                 left: 0;
                             }
                             &::after {
                                 content: '';
                                 opacity: 1;
-                                width: 48%;
+                                width: calc(50% - 1px);
                                 height: 2px;
                                 position: absolute;
-                                background-color: #008ed6;
+                                background-color: $COLOR_SEA;
                                 bottom: -10px;
                                 right: 0;
                             }
@@ -85,8 +85,8 @@ body {
 
             .main-info {
                 .upper-title {
-                    color: #008ed6;
-                    font-size: 14px;
+                    color: $COLOR_SEA;
+                    font-size: 1.4em;
                     font-weight: 700;
                     letter-spacing: 1.4px;
                     line-height: 48px;
@@ -95,7 +95,7 @@ body {
                 }
 
                 .title {
-                    color: #fff;
+                    color: $COLOR_WHITE;
                     font-size: 4.8em;
                     font-weight: 600;
                     margin-bottom: 25px;
@@ -103,7 +103,7 @@ body {
                 }
 
                 .description {
-                    color: #999999;
+                    color: $COLOR_DESC;
                     font-size: 1.8em;
                     line-height: 25px;
                 }
@@ -123,13 +123,14 @@ body {
         }
 
         .right-block {
+            width: 100%;
             margin-top: 55px;
             display: flex;
             justify-content: flex-end;
             align-items: flex-end;
 
             img {
-                width: 510px;
+                width: 100%;
                 height: 520px;
             }
         }
@@ -167,7 +168,7 @@ body {
 
                 .block-desc {
                     text-align: center;
-                    color: #999999;
+                    color: $COLOR_DESC;
                     font-size: 1.8em;
                     line-height: 26px;
                 }
@@ -179,13 +180,12 @@ body {
             position: absolute;
             width: 100%;
             height: 1px;
-            background-color: #ededed;
+            background-color: $COLOR_BG_WHITE;
         }
     }
 
     // About section
     .about-us {
-        height: 100%;
         padding: 70px 0 15px;
 
         .left-block {
@@ -208,7 +208,7 @@ body {
 
                 .about-desc {
                     font-size: 1.8em;
-                    color: #999999;
+                    color: $COLOR_DESC;
                     line-height: 26px;
                 }
 
@@ -226,24 +226,14 @@ body {
 
                         &.item1 {
                             &::before {
-                                content: '';
-                                position: absolute;
-                                top: 30%;
-                                left: -25px;
-                                width: 16px;
-                                height: 16px;
+                                @extend %about-item-img;
                                 background: url('../../images/about-cup.png') no-repeat;
                             }
                         }
 
                         &.item2 {
                             &::before {
-                                content: '';
-                                position: absolute;
-                                top: 30%;
-                                left: -25px;
-                                width: 16px;
-                                height: 16px;
+                                @extend %about-item-img;
                                 background: url('../../images/about-mouse.png') no-repeat;
                                 background-position: center;
                             }
@@ -251,12 +241,7 @@ body {
 
                         &.item3 {
                             &::before {
-                                content: '';
-                                position: absolute;
-                                top: 30%;
-                                left: -25px;
-                                width: 16px;
-                                height: 16px;
+                                @extend %about-item-img;
                                 background: url('../../images/about-energy.png') no-repeat;
                                 background-position: center;
                             }
@@ -264,12 +249,7 @@ body {
 
                         &.item4 {
                             &::before {
-                                content: '';
-                                position: absolute;
-                                top: 30%;
-                                left: -25px;
-                                width: 16px;
-                                height: 16px;
+                                @extend %about-item-img;
                                 background: url('../../images/about-speed.png') no-repeat;
                             }
                         }
@@ -281,13 +261,11 @@ body {
 
     // Testimonials section
     .testimonials {
-        height: 100%;
-        background-color: #f2f2f2;
+        background-color: $COLOR_BG_WHITE2;
         padding-top: 35px;
         padding-bottom: 20px;
 
         .left-block {
-            height: 100%;
             margin: 95px 0 0;
 
             .testimonials-head {
@@ -303,7 +281,7 @@ body {
 
                 .testimonials-desc {
                     font-size: 1.8em;
-                    color: #999999;
+                    color: $COLOR_DESC;
                     line-height: 26px;
                 }
             }
@@ -311,11 +289,6 @@ body {
 
         .right-block {
             text-align: end;
-            height: 100%;
-
-            img {
-                height: 100%;
-            }
         }
     }
 
@@ -323,14 +296,13 @@ body {
     .comments {
         background: url('../../images/slider_back.png') no-repeat;
         background-size: 100%;
-        height: 100%;
         padding-top: 55px;
 
         .comments-head {
             @include section-title();
 
             .title {
-                color: #fff;
+                color: $COLOR_WHITE;
             }
 
             .section-underline {
@@ -342,13 +314,14 @@ body {
             padding-top: 85px;
 
             .slider {
-                padding-bottom: 25px;
+                padding-bottom: 55px;
+                margin-bottom: 0;
 
                 .slide {
                     flex-direction: column;
 
                     .user-comment {
-                        color: #fff;
+                        color: $COLOR_WHITE;
                         font-size: 2.4em;
                         font-weight: 400;
                     }
@@ -366,14 +339,14 @@ body {
                             flex-direction: column;
 
                             .user-name {
-                                color: #fff;
+                                color: $COLOR_WHITE;
                                 font-size: 1.6em;
                                 font-weight: 400;
                                 margin: 0;
                             }
 
                             .user-company {
-                                color: #fff;
+                                color: $COLOR_WHITE;
                                 font-size: 1.6em;
                                 font-weight: 700;
                                 margin: 0;
@@ -407,8 +380,8 @@ body {
                         &.slick-active button:before {
                             top: 3px;
                             left: 3px;
-                            border-color: #fff;
-                            background: #fff;
+                            border-color: $COLOR_WHITE;
+                            background: $COLOR_WHITE;
                             width: 14px;
                             height: 14px;
                             opacity: 1;
@@ -421,7 +394,7 @@ body {
 
     // Advert under users comments
     .advert-board {
-        background-color: #15141a;
+        background-color: $COLOR_BG_BLACK;
         height: 100%;
         padding: 60px 0;
 
@@ -430,14 +403,14 @@ body {
 
             .advert-header {
                 .title {
-                    color: #fff;
+                    color: $COLOR_WHITE;
                     font-size: 3.6em;
                     font-weight: 400;
                 }
         
                 .title-after {
                     margin-left: 10px;
-                    color: #fff;
+                    color: $COLOR_WHITE;
                     font-weight: 300;
                 }
             }
@@ -479,7 +452,7 @@ body {
 
                     .block-title {
                         justify-content: center;
-                        border: 1px solid #e0e0e0;
+                        border: 1px solid $COLOR_SILVER;
                         border-bottom: 0;
                         padding: 25px 80px;
 
@@ -498,7 +471,7 @@ body {
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
-                        border: 1px solid #e0e0e0;
+                        border: 1px solid $COLOR_SILVER;
                         border-bottom: 0;
                         padding: 15px 0 30px;
                         transition: .3s;
@@ -515,7 +488,7 @@ body {
                             }
 
                             span {
-                                color: #999999;
+                                color: $COLOR_DESC;
                                 font-size: 0.33em;
                                 font-weight: 400;
                             }
@@ -528,7 +501,7 @@ body {
 
                         .cost-under {
                             margin: -15px 0 0;
-                            color: #999999;
+                            color: $COLOR_DESC;
                             font-size: 1.8em;
                             font-weight: 400;
                             transition: .3s;
@@ -537,11 +510,11 @@ body {
 
                     .block-desc {
                         justify-content: center;
-                        border: 1px solid #e0e0e0;
+                        border: 1px solid $COLOR_SILVER;
                         padding: 50px 30px 40px;
 
                         .description {
-                            color: #999999;
+                            color: $COLOR_DESC;
                             font-size: 1.8em;
                             font-weight: 400;
                             line-height: 26px;
@@ -549,19 +522,20 @@ body {
                             text-align: center;
 
                             span {
-                                color: #008ed6;
+                                color: $COLOR_SEA;
                             }
                         }
 
                         .desc-button {
                             .button {
                                 @include all-buttons;
-                                color: #008ed6 !important;
-                                border: 1px solid #e0e0e0 !important;
+                                color: $COLOR_SEA !important;
+                                border: 1px solid $COLOR_SILVER !important;
                                 padding: 15px 40px !important;
 
                                 &:hover {
-                                    color: #fff !important;
+                                    color: $COLOR_WHITE !important;
+                                    border-color: $COLOR_SEA !important;
                                 }
                             }
                         }
@@ -570,20 +544,217 @@ body {
                     &:hover {
                         .block-title {
                             .title {
-                                color: #008ed6;
+                                color: $COLOR_SEA;
                             }
                         }
 
                         .block-cost {
-                            border-color: #008ed6;
-                            background-color: #008ed6;
+                            border-color: $COLOR_SEA;
+                            background-color: $COLOR_SEA;
 
                             .cost, .cost-under {
-                                color: #fff;
+                                color: $COLOR_WHITE;
                             }
                         }
                     }
                 }
+            }
+        }
+    }
+
+    // Contact-us section
+    .contact-us {
+        background-color: $COLOR_BG_WHITE;
+        padding: 55px 0 0;
+        position: relative;
+
+        .contact-head {
+            @include section-title;
+
+            .section-underline {
+                margin-top: -5px;
+            }
+        }
+
+        .contact-body {
+            .contact-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 60px;
+
+                .block-image {
+                    width: 32px;
+                    height: 32px;
+                    margin-bottom: 25px;
+    
+                    img {
+                        max-width: 32px;
+                        max-height: 32px;
+                    }
+                }
+    
+                .block-desc {
+                    p {
+                        color: $COLOR_DESC;
+                        font-size: 1.8em;
+                        font-weight: 400;
+                        line-height: 26px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            width: 65%;
+            margin: 0 auto;
+            background-color: $COLOR_BG_BLACK;
+            padding: 70px 75px 40px 65px;
+            position: relative;
+            bottom: -55px;
+            z-index: 2;
+
+            form {
+                width: 100%;
+                height: 100%;
+
+                .form-top {
+                    height: 90%;
+                    margin: -10px 0;
+
+                    .form-left {
+                        flex-direction: column;
+                        align-items: center;
+                        width: 52%;
+                        height: 100%;
+
+                        .form-left-item {
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 20px 20px 0;
+
+                            input {
+                                width: 100%;
+                                height: 100%;
+                                border: 1px solid rgba(255, 255, 255, 0.2);
+                                background: none;
+                                color: $COLOR_WHITE;
+                                font-size: 1.4em;
+                                border-radius: 5px;
+    
+                                padding: 15px 20px;
+                                outline: none;
+    
+                                &::placeholder {
+                                    color: $COLOR_WHITE;
+                                    opacity: 0.2;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                }
+                            }
+
+                            &:last-child {
+                                padding-bottom: 0;
+                            }
+                        }
+                    }
+
+                    .form-right {
+                        width: 48%;
+
+                        textarea {
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid rgba(255, 255, 255, 0.2);
+                            background: none;
+                            color: $COLOR_WHITE;
+                            font-size: 1.4em;
+                            border-radius: 5px;
+                            resize: none;
+
+                            padding: 15px 20px;
+                            outline: none;
+
+                            &::placeholder {
+                                color: $COLOR_WHITE;
+                                opacity: 0.2;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+
+                .form-bottom {
+                    justify-content: flex-end;
+                    margin-top: 25px;
+
+                    .form-submit {
+                        height: auto;
+                        background: none;
+                        @include all-buttons;
+                        padding: 15px 35px !important;
+                        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // Google-map location section
+    .google-map {
+        width: 100%;
+        height: 360px;
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.footer {
+    background-color: $COLOR_BG_BLACK;
+    padding: 50px 0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .footer-top {
+            a {
+                color: $COLOR_WHITE;
+                opacity: 0.2;
+                font-size: 2em;
+                margin: 0 15px;
+                transition: .3s;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    color: $COLOR_SEA;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+
+            p {
+                color: $COLOR_BROWN;
+                font-size: 1.4em;
+                font-weight: 400;
+                text-transform: uppercase;
             }
         }
     }
