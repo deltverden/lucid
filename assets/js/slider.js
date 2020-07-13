@@ -7,5 +7,12 @@ $('.slider').slick({
     autoplay: true,
     autoplaySpeed: 3000,
     dots: true,
-    arrows: false
+    arrows: false,
+    responsive: [{
+        breakpoint: 1025,
+        settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+        }
+    }]
 });

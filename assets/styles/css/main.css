@@ -16,9 +16,196 @@ body {
   margin: 0 auto;
   padding: 0; }
 
+@media (max-width: 1200px) {
+  .header .container, .features .container, .about-us .container, .testimonials .container,
+  .comments .container, .advert-board .container, .pricing .container, .contact-us .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important; }
+  .header .left-block {
+    margin-bottom: 0 !important; }
+    .header .left-block .main-buttons {
+      margin-top: 40px !important; }
+  .pricing .pricing-body {
+    justify-content: space-around !important; }
+    .pricing .pricing-body .price-block {
+      flex: 100% !important;
+      margin-bottom: 35px !important; }
+  .advert-board .container {
+    flex-direction: column; }
+    .advert-board .container .advert-header {
+      max-width: 100% !important;
+      align-items: center !important; }
+      .advert-board .container .advert-header .title {
+        text-align: center; }
+    .advert-board .container .advert-buttons {
+      margin-top: 40px !important;
+      flex: 100% !important;
+      max-width: 100% !important;
+      text-align: center !important; } }
+
+@media (max-width: 1024px) {
+  .header .top-section .logo {
+    flex: 30% !important;
+    max-width: 30% !important; }
+  .header .top-section .main-navigation {
+    flex: 70% !important;
+    max-width: 70% !important; }
+  .header .bottom-section {
+    flex-direction: column;
+    align-items: center; }
+    .header .bottom-section .left-block {
+      margin: 0 0 20px !important;
+      max-width: 100%;
+      justify-content: center; }
+      .header .bottom-section .left-block .main-info {
+        flex: 100% !important;
+        max-width: 100% !important; }
+      .header .bottom-section .left-block .main-buttons {
+        margin-top: 40px !important; }
+    .header .bottom-section .right-block {
+      max-width: 100%;
+      justify-content: center !important; }
+      .header .bottom-section .right-block img {
+        max-width: 500px; }
+  .features .features-head .title {
+    text-align: center; }
+  .about-us {
+    padding: 0 !important; }
+    .about-us .container {
+      flex-direction: column-reverse;
+      align-items: center; }
+      .about-us .container .left-block {
+        margin-top: 20px !important;
+        max-width: 100%;
+        text-align: center; }
+        .about-us .container .left-block img {
+          max-width: 500px; }
+      .about-us .container .right-block {
+        max-width: 100% !important;
+        padding-left: 0 !important; }
+        .about-us .container .right-block .about-desc {
+          max-width: 100%; }
+  .testimonials .container {
+    flex-direction: column;
+    align-items: center; }
+    .testimonials .container .left-block {
+      max-width: 100% !important; }
+    .testimonials .container .right-block {
+      max-width: 100%;
+      text-align: center !important; }
+      .testimonials .container .right-block img {
+        max-width: 500px; }
+  .pricing {
+    padding-bottom: 10px !important; }
+  .comments .comments-body .slide {
+    text-align: center; }
+    .comments .comments-body .slide .user-info {
+      justify-content: center;
+      text-align: left; }
+  .comments .comments-body .slick-dots {
+    margin-top: 50px !important; }
+  .contact-us {
+    justify-content: center; }
+    .contact-us .contact-form {
+      width: 80% !important;
+      margin: 0 auto !important; } }
+
+@media (max-width: 1000px) {
+  .header .bottom-section {
+    flex-direction: column;
+    align-items: center; }
+    .header .bottom-section .left-block {
+      margin: 0 0 20px !important; }
+      .header .bottom-section .left-block .main-buttons {
+        margin-top: 40px !important; } }
+
+@media (max-width: 768px) {
+  .mobile-navbar-button {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center; }
+  .header .top-section {
+    display: none; }
+  .header .bottom-section .title {
+    font-size: 4.1em !important; }
+  .features .features-body {
+    margin-top: 40px !important;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%; }
+    .features .features-body .feature-block {
+      max-width: 100%; }
+  .testimonials .left-block {
+    margin-top: 40px !important; }
+  .pricing .pricing-body {
+    margin-top: 40px !important; }
+  .contact-us .container {
+    padding: 0 !important; }
+    .contact-us .container .contact-body {
+      flex-direction: column;
+      align-items: center; }
+      .contact-us .container .contact-body .contact-block {
+        max-width: 100%;
+        margin-top: 20px !important; }
+        .contact-us .container .contact-body .contact-block:first-child {
+          margin-top: 40px !important; }
+        .contact-us .container .contact-body .contact-block .block-image {
+          margin-bottom: 5px !important;
+          text-align: center !important; }
+    .contact-us .container .contact-form {
+      width: 100% !important;
+      margin: 0 auto !important;
+      margin-top: 40px !important;
+      bottom: 0 !important;
+      padding: 40px 0 30px !important; }
+      .contact-us .container .contact-form form .form-top {
+        flex-direction: column;
+        align-items: center; }
+        .contact-us .container .contact-form form .form-top .form-left {
+          width: 100% !important; }
+          .contact-us .container .contact-form form .form-top .form-left .form-left-item {
+            padding-right: 0 !important;
+            max-width: 90%; }
+            .contact-us .container .contact-form form .form-top .form-left .form-left-item:last-child {
+              padding-bottom: 30px !important; }
+        .contact-us .container .contact-form form .form-top .form-right {
+          width: 90% !important; }
+      .contact-us .container .contact-form form .form-bottom {
+        justify-content: center !important; }
+  .footer {
+    padding: 30px !important; } }
+
+@media (max-width: 425px) {
+  .header .bottom-section .main-buttons {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    .header .bottom-section .main-buttons .view-btn {
+      margin-top: 20px !important;
+      margin-left: 0 !important; }
+  .advert-board .advert-buttons {
+    display: flex;
+    flex-direction: column; }
+    .advert-board .advert-buttons .advert-download {
+      margin-left: 0 !important;
+      margin-top: 20px !important; }
+  .comments .comments-body {
+    padding-top: 40px !important; }
+    .comments .comments-body .slide .user-info {
+      flex-direction: column; }
+      .comments .comments-body .slide .user-info .user-about {
+        margin-left: 0 !important; }
+        .comments .comments-body .slide .user-info .user-about .user-name, .comments .comments-body .slide .user-info .user-about .user-company {
+          text-align: center !important; } }
+
+@media (max-width: 360px) {
+  .header .bottom-section .left-block .title {
+    font-size: 3.6em !important; } }
+
 .header {
   background: url("../../images/header_back.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   padding: 40px 0 0; }
   .header .top-section .main-navigation .nav-menu {
     justify-content: flex-end; }
@@ -57,6 +244,67 @@ body {
           background-color: #008ed6;
           bottom: -10px;
           right: 0; }
+  .header .mobile-navbar-button {
+    display: none;
+    margin-bottom: 20px; }
+    .header .mobile-navbar-button .mobile-sandwitch {
+      width: 40px;
+      height: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px 5px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      position: relative; }
+      .header .mobile-navbar-button .mobile-sandwitch span {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #fff; }
+      .header .mobile-navbar-button .mobile-sandwitch.active-nav-btn span {
+        position: absolute;
+        width: 70%;
+        height: 2px;
+        bottom: 45%; }
+        .header .mobile-navbar-button .mobile-sandwitch.active-nav-btn span:nth-child(1n) {
+          transform: rotate(45deg); }
+        .header .mobile-navbar-button .mobile-sandwitch.active-nav-btn span:nth-child(3n) {
+          transform: rotate(-45deg); }
+        .header .mobile-navbar-button .mobile-sandwitch.active-nav-btn span:nth-child(2n) {
+          display: none; }
+      .header .mobile-navbar-button .mobile-sandwitch:hover {
+        cursor: pointer; }
+  .header .mobile-top-section {
+    display: none;
+    width: 100%;
+    padding: 20px 0; }
+    .header .mobile-top-section .mobile-navigation {
+      width: 100%; }
+      .header .mobile-top-section .mobile-navigation .mobile-menu {
+        width: 100%;
+        margin: 0; }
+        .header .mobile-top-section .mobile-navigation .mobile-menu .nav-item {
+          width: 100%;
+          list-style: none;
+          text-align: center; }
+          .header .mobile-top-section .mobile-navigation .mobile-menu .nav-item a {
+            display: block;
+            font-size: 1.6em;
+            font-weight: 600;
+            text-decoration: none; }
+    .header .mobile-top-section.active-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .header .mobile-top-section.active-mobile .nav-item a {
+        font-size: 1.6em;
+        font-weight: 600;
+        text-decoration: none;
+        color: #fff; }
+        .header .mobile-top-section.active-mobile .nav-item a:hover {
+          background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); }
   .header .bottom-section {
     justify-content: space-between; }
     .header .bottom-section .left-block {
@@ -104,7 +352,7 @@ body {
       align-items: flex-end; }
       .header .bottom-section .right-block img {
         width: 100%;
-        height: 520px; }
+        height: 100%; }
 
 .main {
   margin-top: 60px; }
@@ -121,7 +369,6 @@ body {
       color: #1a1a1a;
       font-size: 36px;
       font-weight: 600;
-      line-height: 28px;
       margin: 0 0 40px; }
     .main .features .features-head .section-underline {
       width: 42px;
@@ -172,6 +419,8 @@ body {
     padding: 70px 0 15px; }
     .main .about-us .left-block {
       padding-left: 20px; }
+      .main .about-us .left-block img {
+        width: 100%; }
     .main .about-us .right-block {
       margin: 45px 0 0;
       padding-left: 15px; }
@@ -188,7 +437,6 @@ body {
           color: #1a1a1a;
           font-size: 36px;
           font-weight: 600;
-          line-height: 28px;
           margin: 0 0 40px; }
         .main .about-us .right-block .about-head .section-underline {
           width: 42px;
@@ -242,28 +490,27 @@ body {
     background-color: #f2f2f2;
     padding-top: 35px;
     padding-bottom: 20px; }
-    .main .testimonials .left-block {
-      margin: 95px 0 0; }
-      .main .testimonials .left-block .testimonials-head {
+    .main .testimonials .container {
+      align-items: center; }
+      .main .testimonials .container .left-block .testimonials-head {
         flex-direction: column;
         align-items: center; }
-        .main .testimonials .left-block .testimonials-head .upper-title {
+        .main .testimonials .container .left-block .testimonials-head .upper-title {
           color: #008ed6;
           font-size: 14px;
           font-weight: 700;
           letter-spacing: 1.4px;
           text-transform: uppercase; }
-        .main .testimonials .left-block .testimonials-head .title {
+        .main .testimonials .container .left-block .testimonials-head .title {
           color: #1a1a1a;
           font-size: 36px;
           font-weight: 600;
-          line-height: 28px;
           margin: 0 0 40px; }
-        .main .testimonials .left-block .testimonials-head .section-underline {
+        .main .testimonials .container .left-block .testimonials-head .section-underline {
           width: 42px;
           height: 2px;
           position: relative; }
-          .main .testimonials .left-block .testimonials-head .section-underline::before {
+          .main .testimonials .container .left-block .testimonials-head .section-underline::before {
             content: '';
             position: absolute;
             width: 48%;
@@ -271,7 +518,7 @@ body {
             bottom: 0;
             left: 0;
             background-color: #008ed6; }
-          .main .testimonials .left-block .testimonials-head .section-underline::after {
+          .main .testimonials .container .left-block .testimonials-head .section-underline::after {
             content: '';
             position: absolute;
             width: 48%;
@@ -279,19 +526,22 @@ body {
             bottom: 0;
             right: 0;
             background-color: #008ed6; }
-        .main .testimonials .left-block .testimonials-head .section-underline {
+        .main .testimonials .container .left-block .testimonials-head .section-underline {
           margin-top: -10px; }
-      .main .testimonials .left-block .testimontials-body {
+      .main .testimonials .container .left-block .testimontials-body {
         margin-top: 25px; }
-        .main .testimonials .left-block .testimontials-body .testimonials-desc {
+        .main .testimonials .container .left-block .testimontials-body .testimonials-desc {
           font-size: 1.8em;
           color: #999999;
           line-height: 26px; }
-    .main .testimonials .right-block {
-      text-align: end; }
+      .main .testimonials .container .right-block {
+        text-align: end; }
+        .main .testimonials .container .right-block img {
+          width: 100%;
+          height: 100%; }
   .main .comments {
     background: url("../../images/slider_back.png") no-repeat;
-    background-size: 100%;
+    background-size: cover;
     padding-top: 55px; }
     .main .comments .comments-head {
       flex-direction: column;
@@ -306,7 +556,6 @@ body {
         color: #1a1a1a;
         font-size: 36px;
         font-weight: 600;
-        line-height: 28px;
         margin: 0 0 40px; }
       .main .comments .comments-head .section-underline {
         width: 42px;
@@ -338,7 +587,8 @@ body {
         padding-bottom: 55px;
         margin-bottom: 0; }
         .main .comments .comments-body .slider .slide {
-          flex-direction: column; }
+          flex-direction: column;
+          padding: 0 20px; }
           .main .comments .comments-body .slider .slide .user-comment {
             color: #fff;
             font-size: 2.4em;
@@ -394,7 +644,6 @@ body {
         font-size: 3.6em;
         font-weight: 400; }
       .main .advert-board .container .advert-header .title-after {
-        margin-left: 10px;
         color: #fff;
         font-weight: 300; }
       .main .advert-board .container .advert-buttons {
@@ -429,7 +678,6 @@ body {
         color: #1a1a1a;
         font-size: 36px;
         font-weight: 600;
-        line-height: 28px;
         margin: 0 0 40px; }
       .main .pricing .container .pricing-head .section-underline {
         width: 42px;
@@ -455,10 +703,12 @@ body {
         margin-top: -5px; }
     .main .pricing .container .pricing-body {
       margin-top: 70px;
+      flex-wrap: wrap;
       justify-content: space-between; }
       .main .pricing .container .pricing-body .price-block {
         flex-direction: column;
-        max-width: 270px; }
+        max-width: 270px;
+        margin: 0 10px; }
         .main .pricing .container .pricing-body .price-block .block-title {
           justify-content: center;
           border: 1px solid #e0e0e0;
@@ -542,87 +792,107 @@ body {
             color: #fff; }
   .main .contact-us {
     background-color: #ededed;
-    padding: 55px 0 0;
-    position: relative; }
-    .main .contact-us .contact-head {
-      flex-direction: column;
-      align-items: center; }
-      .main .contact-us .contact-head .upper-title {
-        color: #008ed6;
-        font-size: 14px;
-        font-weight: 700;
-        letter-spacing: 1.4px;
-        text-transform: uppercase; }
-      .main .contact-us .contact-head .title {
-        color: #1a1a1a;
-        font-size: 36px;
-        font-weight: 600;
-        line-height: 28px;
-        margin: 0 0 40px; }
-      .main .contact-us .contact-head .section-underline {
-        width: 42px;
-        height: 2px;
-        position: relative; }
-        .main .contact-us .contact-head .section-underline::before {
-          content: '';
-          position: absolute;
-          width: 48%;
-          height: 100%;
-          bottom: 0;
-          left: 0;
-          background-color: #008ed6; }
-        .main .contact-us .contact-head .section-underline::after {
-          content: '';
-          position: absolute;
-          width: 48%;
-          height: 100%;
-          bottom: 0;
-          right: 0;
-          background-color: #008ed6; }
-      .main .contact-us .contact-head .section-underline {
-        margin-top: -5px; }
-    .main .contact-us .contact-body .contact-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 60px; }
-      .main .contact-us .contact-body .contact-block .block-image {
-        width: 32px;
-        height: 32px;
-        margin-bottom: 25px; }
-        .main .contact-us .contact-body .contact-block .block-image img {
-          max-width: 32px;
-          max-height: 32px; }
-      .main .contact-us .contact-body .contact-block .block-desc p {
-        color: #999999;
-        font-size: 1.8em;
-        font-weight: 400;
-        line-height: 26px;
-        text-align: center; }
-    .main .contact-us .contact-form {
-      width: 65%;
-      margin: 0 auto;
-      background-color: #15141a;
-      padding: 70px 75px 40px 65px;
-      position: relative;
-      bottom: -55px;
-      z-index: 2; }
-      .main .contact-us .contact-form form {
-        width: 100%;
-        height: 100%; }
-        .main .contact-us .contact-form form .form-top {
-          height: 90%;
-          margin: -10px 0; }
-          .main .contact-us .contact-form form .form-top .form-left {
-            flex-direction: column;
-            align-items: center;
-            width: 52%;
-            height: 100%; }
-            .main .contact-us .contact-form form .form-top .form-left .form-left-item {
-              width: 100%;
-              height: 100%;
-              padding: 0 20px 20px 0; }
-              .main .contact-us .contact-form form .form-top .form-left .form-left-item input {
+    padding: 55px 0 0; }
+    .main .contact-us .container {
+      position: relative; }
+      .main .contact-us .container .contact-head {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%; }
+        .main .contact-us .container .contact-head .upper-title {
+          color: #008ed6;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 1.4px;
+          text-transform: uppercase; }
+        .main .contact-us .container .contact-head .title {
+          color: #1a1a1a;
+          font-size: 36px;
+          font-weight: 600;
+          margin: 0 0 40px; }
+        .main .contact-us .container .contact-head .section-underline {
+          width: 42px;
+          height: 2px;
+          position: relative; }
+          .main .contact-us .container .contact-head .section-underline::before {
+            content: '';
+            position: absolute;
+            width: 48%;
+            height: 100%;
+            bottom: 0;
+            left: 0;
+            background-color: #008ed6; }
+          .main .contact-us .container .contact-head .section-underline::after {
+            content: '';
+            position: absolute;
+            width: 48%;
+            height: 100%;
+            bottom: 0;
+            right: 0;
+            background-color: #008ed6; }
+        .main .contact-us .container .contact-head .section-underline {
+          margin-top: -5px; }
+      .main .contact-us .container .contact-body {
+        width: 100%; }
+        .main .contact-us .container .contact-body .contact-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 60px; }
+          .main .contact-us .container .contact-body .contact-block .block-image {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 25px; }
+            .main .contact-us .container .contact-body .contact-block .block-image img {
+              max-width: 32px;
+              max-height: 32px; }
+          .main .contact-us .container .contact-body .contact-block .block-desc p {
+            color: #999999;
+            font-size: 1.8em;
+            font-weight: 400;
+            line-height: 26px;
+            text-align: center; }
+      .main .contact-us .container .contact-form {
+        width: 65%;
+        margin: 0 auto;
+        background-color: #15141a;
+        padding: 70px 75px 40px 65px;
+        position: relative;
+        bottom: -55px;
+        z-index: 2; }
+        .main .contact-us .container .contact-form form {
+          width: 100%; }
+          .main .contact-us .container .contact-form form .form-top {
+            margin: -10px 0; }
+            .main .contact-us .container .contact-form form .form-top .form-left {
+              flex-direction: column;
+              align-items: center;
+              width: 52%;
+              height: 100%; }
+              .main .contact-us .container .contact-form form .form-top .form-left .form-left-item {
+                width: 100%;
+                height: 100%;
+                padding: 0 30px 30px 0; }
+                .main .contact-us .container .contact-form form .form-top .form-left .form-left-item input {
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  background: none;
+                  color: #fff;
+                  font-size: 1.4em;
+                  border-radius: 5px;
+                  padding: 15px 20px;
+                  outline: none; }
+                  .main .contact-us .container .contact-form form .form-top .form-left .form-left-item input::placeholder {
+                    color: #fff;
+                    opacity: 0.2;
+                    font-weight: 700;
+                    text-transform: uppercase; }
+                .main .contact-us .container .contact-form form .form-top .form-left .form-left-item:last-child {
+                  padding-bottom: 0; }
+            .main .contact-us .container .contact-form form .form-top .form-right {
+              width: 48%; }
+              .main .contact-us .container .contact-form form .form-top .form-right textarea {
                 width: 100%;
                 height: 100%;
                 border: 1px solid rgba(255, 255, 255, 0.2);
@@ -630,54 +900,35 @@ body {
                 color: #fff;
                 font-size: 1.4em;
                 border-radius: 5px;
+                resize: none;
                 padding: 15px 20px;
                 outline: none; }
-                .main .contact-us .contact-form form .form-top .form-left .form-left-item input::placeholder {
+                .main .contact-us .container .contact-form form .form-top .form-right textarea::placeholder {
                   color: #fff;
                   opacity: 0.2;
                   font-weight: 700;
                   text-transform: uppercase; }
-              .main .contact-us .contact-form form .form-top .form-left .form-left-item:last-child {
-                padding-bottom: 0; }
-          .main .contact-us .contact-form form .form-top .form-right {
-            width: 48%; }
-            .main .contact-us .contact-form form .form-top .form-right textarea {
-              width: 100%;
-              height: 100%;
-              border: 1px solid rgba(255, 255, 255, 0.2);
+          .main .contact-us .container .contact-form form .form-bottom {
+            justify-content: flex-end;
+            margin-top: 25px; }
+            .main .contact-us .container .contact-form form .form-bottom .form-submit {
+              height: auto;
               background: none;
-              color: #fff;
-              font-size: 1.4em;
-              border-radius: 5px;
-              resize: none;
-              padding: 15px 20px;
-              outline: none; }
-              .main .contact-us .contact-form form .form-top .form-right textarea::placeholder {
+              padding: 15px 35px !important;
+              border: 1px solid rgba(255, 255, 255, 0.2) !important; }
+              .main .contact-us .container .contact-form form .form-bottom .form-submit {
                 color: #fff;
-                opacity: 0.2;
+                font-size: 1.4em;
                 font-weight: 700;
-                text-transform: uppercase; }
-        .main .contact-us .contact-form form .form-bottom {
-          justify-content: flex-end;
-          margin-top: 25px; }
-          .main .contact-us .contact-form form .form-bottom .form-submit {
-            height: auto;
-            background: none;
-            padding: 15px 35px !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important; }
-            .main .contact-us .contact-form form .form-bottom .form-submit {
-              color: #fff;
-              font-size: 1.4em;
-              font-weight: 700;
-              text-transform: uppercase;
-              text-decoration: none;
-              padding: 15px 28px;
-              border: 2px solid rgba(255, 255, 255, 0.1);
-              border-radius: 5px;
-              transition: .3s; }
-              .main .contact-us .contact-form form .form-bottom .form-submit:hover {
-                background-color: #008ed6;
-                border-color: #008ed6; }
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 15px 28px;
+                border: 2px solid rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                transition: .3s; }
+                .main .contact-us .container .contact-form form .form-bottom .form-submit:hover {
+                  background-color: #008ed6;
+                  border-color: #008ed6; }
   .main .google-map {
     width: 100%;
     height: 360px; }
@@ -687,7 +938,8 @@ body {
 
 .footer {
   background-color: #15141a;
-  padding: 50px 0; }
+  padding: 50px 0;
+  width: 100%; }
   .footer .container {
     display: flex;
     flex-direction: column;
@@ -709,7 +961,9 @@ body {
     .footer .container .footer-bottom {
       margin-top: 20px; }
       .footer .container .footer-bottom p {
+        margin: 0;
         color: #444348;
         font-size: 1.4em;
         font-weight: 400;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        text-align: center; }
