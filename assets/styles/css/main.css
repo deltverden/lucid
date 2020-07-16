@@ -7,15 +7,6 @@
   width: 16px;
   height: 16px; }
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 10px; }
-
-.container {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0; }
-
 @media (max-width: 1200px) {
   .header .container, .features .container, .about-us .container, .testimonials .container,
   .comments .container, .advert-board .container, .pricing .container, .contact-us .container {
@@ -203,6 +194,15 @@ body {
   .header .bottom-section .left-block .title {
     font-size: 3.6em !important; } }
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 10px; }
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0; }
+
 .header {
   background: url("../../images/header_back.png") no-repeat;
   background-size: cover;
@@ -298,6 +298,9 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center; }
+      @media (min-width: 769px) {
+        .header .mobile-top-section.active-mobile {
+          display: none; } }
       .header .mobile-top-section.active-mobile .nav-item a {
         font-size: 1.6em;
         font-weight: 600;
