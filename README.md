@@ -1,3 +1,3 @@
 # lucid
-npm i
-gulp default (You need install global gulp)
+1. npm i
+2. gulp default (You need install global gulp)
