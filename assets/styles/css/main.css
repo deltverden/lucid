@@ -710,8 +710,7 @@ body {
       justify-content: space-between; }
       .main .pricing .container .pricing-body .price-block {
         flex-direction: column;
-        max-width: 270px;
-        margin: 0 10px; }
+        max-width: 270px; }
         .main .pricing .container .pricing-body .price-block .block-title {
           justify-content: center;
           border: 1px solid #e0e0e0;
